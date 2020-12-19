@@ -60,7 +60,7 @@ def main(args):
 
 if __name__ == "__main__":
     # Setting up some arguments for the console
-    parser = argparse.ArgumentParser(description="MovePros website")
+    parser = argparse.ArgumentParser(description="FastAPI website")
     parser.add_argument('--debug', help="Enable debug mode", action="store_true")
     parser.add_argument('--host', help="The IP to run on, e.g. 127.0.0.1", type=str, default="127.0.0.1")
     parser.add_argument('--port', help="Sets the port to run on", type=int, default=8000)
