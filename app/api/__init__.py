@@ -7,7 +7,7 @@ app = application.app
 
 # Breaking some PEP 8 standard stuff to make it more clear EXACTLY what is happening with registering routes
 # PEP 8 is fantastic, but this file is so small that it won't take more than a glance to see this import
-from app.api.routers import __routers__
+from .routers import __routers__
 
 # This may seem like a bad idea as we can now no longer use the functionality provided by include_router from fastapi
 # but that same functionality seems to exposed by creating an instance of APIRouter and passing in the correct
@@ -20,5 +20,5 @@ __all__ = [
     "Configuration",
     "routers",
     "application",
-    "routers"
+    "routers",
 ]

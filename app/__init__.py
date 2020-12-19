@@ -1,8 +1,11 @@
-from .__main__ import debug
+# To allow the app to be run as a module we register the app's path
+import os
+import sys
 
-import api
+sys.path.append("app")
+
+from api import *
 
 __all__ = [
     "api",
-    "debug",
 ]
