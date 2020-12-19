@@ -5,8 +5,9 @@
 2. git pull
 3. python -m venv venv/
 4. source venv/bin/activate
-5. pip install .
-6. python -m app
+5. cd fastapi-example
+6. pip install .
+7. python -m app
 
 ## Default routes
 - /snake
