@@ -10,9 +10,11 @@ setup(
     author_email='philler3138@gmail.com',
     description='A simple fastapi app capable of serving webpages with routers support',
     install_requires=[
+        'bdist_wheel',
         'uvicorn',
         'setuptools',
         'fastapi',
-        'aiofiles'
+        'aiofiles',
+        'jinja2'
     ]
 )

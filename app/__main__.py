@@ -3,7 +3,7 @@ import logging
 import argparse
 import os
 
-from api import Server, Configuration
+from app.api import Server, Configuration
 
 debug = False
 
