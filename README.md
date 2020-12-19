@@ -12,6 +12,10 @@
 - /snake
 - /items/id  *id is a number*
 - /status
+- /docs/  *provided by fastapi*
 
 #### Example Route
 http://127.0.0.1:8000/snake/
+
+## Notes
+- By default we disable the redoc functionality provided by FastAPI
