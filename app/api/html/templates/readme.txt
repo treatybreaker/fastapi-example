@@ -1,0 +1,1 @@
+This directory is for templated HTML, e.g. via jinja2 so we can modify the html prior to being sent to a end-point

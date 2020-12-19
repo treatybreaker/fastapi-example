@@ -1,0 +1,1 @@
+This directory is for static HTML, e.g. html files that have no templating applied to them and are served "as-is"
