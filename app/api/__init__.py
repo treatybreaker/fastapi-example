@@ -1,6 +1,6 @@
 from .Server import Server, Configuration
 from .application import application
-
+from .database import database
 # app is defined here so the call to run it in the __main__ file executes properly, take a look
 # at the configuration we pass in within the main file to understand why app is defined here again
 app = application.app
@@ -21,4 +21,5 @@ __all__ = [
     "routers",
     "application",
     "routers",
+    "database"
 ]

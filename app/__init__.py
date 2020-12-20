@@ -2,7 +2,8 @@
 import os
 import sys
 
-sys.path.append("app")
+if "app" not in sys.path:
+    sys.path.append("app")
 
 from api import *
 

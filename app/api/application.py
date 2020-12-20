@@ -10,11 +10,12 @@ class Application:
     """
     app = fastapi.FastAPI(redoc_url=None)  # Initializing our app
 
+    _html_directory = os.path.join(os.path.dirname(os.path.abspath(__file__)), "html")
     # Defining our templates directory
-    templates = Jinja2Templates(directory=os.path.abspath("app/api/html/templates"))
+    templates = Jinja2Templates(directory=os.path.join(_html_directory, "templates"))
 
     # Mounting our static files
-    app.mount("/static", StaticFiles(directory=os.path.abspath("app/api/html/static")), name="static")
+    app.mount("/static", StaticFiles(directory=os.path.join(_html_directory, "templates")), name="static")
 
 
 application = Application()

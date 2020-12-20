@@ -3,3 +3,4 @@ uvicorn>=0.13.1
 setuptools>=51.0.0
 aiofiles>=0.6.0
 jinja2>=2.11.2
+sqlalchemy

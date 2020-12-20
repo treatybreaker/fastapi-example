@@ -14,6 +14,7 @@ setup(
         'setuptools',
         'fastapi',
         'aiofiles',
-        'jinja2'
+        'jinja2',
+        'sqlalchemy'
     ]
 )
