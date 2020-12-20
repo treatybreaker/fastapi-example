@@ -15,7 +15,7 @@ class Application:
     templates = Jinja2Templates(directory=os.path.join(_html_directory, "templates"))
 
     # Mounting our static files
-    app.mount("/static", StaticFiles(directory=os.path.join(_html_directory, "templates")), name="static")
+    app.mount("/static", StaticFiles(directory=os.path.join(_html_directory, "static")), name="static")
 
 
 application = Application()
