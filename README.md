@@ -1,4 +1,7 @@
 # FastAPI Example
+A quick and simple FastAPI application that can serve HTML pages via templating or static files.
+
+It takes advantage of FastAPI routers (Blueprints are a rough equivalent in flask)
 
 ## Usage (Linux)
 1. git clone https://github.com/treatybreaker/fastapi-example.git
