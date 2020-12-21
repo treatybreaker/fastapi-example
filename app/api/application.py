@@ -6,7 +6,7 @@ from fastapi.staticfiles import StaticFiles
 
 class Application:
     """
-    Defines the application as a composition of several
+    Defines the application as a composition of several fastapi application related attributes including the app itself
     """
     app = fastapi.FastAPI(redoc_url=None)  # Initializing our app
 
