@@ -1,6 +1,9 @@
+import logging
 from .Server import Server, Configuration
 from .application import application
 from .database import database
+
+log = logging.getLogger(__name__)
 # app is defined here so the call to run it in the __main__ file executes properly, take a look
 # at the configuration we pass in within the main file to understand why app is defined here again
 app = application.app
@@ -14,6 +17,14 @@ from .routers import __routers__
 # kwargs and as such include_router can be a generic way to include the routes with no loss of function
 for router in __routers__:
     app.include_router(router)
+
+
+@app.on_event("startup")
+async def list_routes():
+    for route in app.routes:
+        # I suspect I am fucking this up, but I'm not going to go digging thus this __dict__ pathing stays
+        log.info(f"Registered route {route.__dict__['path']}")
+
 
 __all__ = [
     "Server",

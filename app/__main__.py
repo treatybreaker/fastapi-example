@@ -43,12 +43,17 @@ def main(args):
 
     port = args.port or 8000
 
+    if debug:
+        reload = True
+    else:
+        reload = False
     # Get the server
     server = Server(config=Configuration("api:app",
                                          host=host,
                                          port=port,
                                          log_config=None,
-                                         debug=debug))  # Debug here refers back to the check for the debug flag
+                                         debug=debug,  # Debug here refers back to the check for the debug flag
+                                         reload=reload))
 
     # We run the server as a task as this allows us to run other asynchronous applications (e.g. a twitter bot)
     # within the same program if we ever decide to expand the application in the future
@@ -61,7 +66,7 @@ def main(args):
 if __name__ == "__main__":
     # Setting up some arguments for the console
     parser = argparse.ArgumentParser(description="FastAPI website")
-    parser.add_argument('--debug', help="Enable debug mode", action="store_true")
+    parser.add_argument('--debug', help="Enable debug mode", action="store_true", default=False)
     parser.add_argument('--host', help="The IP to run on, e.g. 127.0.0.1", type=str, default="127.0.0.1")
     parser.add_argument('--port', help="Sets the port to run on", type=int, default=8000)
     main(parser.parse_args())
